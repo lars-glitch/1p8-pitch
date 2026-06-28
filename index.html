@@ -210,7 +210,8 @@
 
   /* ---------- Giant background wordmark ---------- */
   .bg-logo {
-    position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+    position: absolute; inset: 0;
+    display: flex; align-items: center; justify-content: center;
     font-weight: 900; letter-spacing: -0.05em; line-height: 1;
     font-size: clamp(440px, 78vw, 1300px); white-space: nowrap;
     z-index: 0; pointer-events: none; user-select: none; opacity: 0.045;
@@ -393,6 +394,8 @@
        rendern box-shadow als harte Rechtecke. Farbige Borders bleiben erhalten. */
     *, *::before, *::after { box-shadow: none !important; }
     .rm-node { background: var(--card); }
+    /* Hintergrund-Wordmark im Druck vollständig in den Frame zentrieren */
+    .bg-logo { font-size: 540px; opacity: 0.05; }
   }
 </style>
 </head>
