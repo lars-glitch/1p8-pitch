@@ -389,6 +389,10 @@
     .eyebrow .dot { animation: none; }
     .slide::before { display: none; }
     .float-logo { animation: none; }
+    /* Schatten/Glows im Druck deaktivieren: manche Print-Engines (Safari, Vorschau)
+       rendern box-shadow als harte Rechtecke. Farbige Borders bleiben erhalten. */
+    *, *::before, *::after { box-shadow: none !important; }
+    .rm-node { background: var(--card); }
   }
 </style>
 </head>
